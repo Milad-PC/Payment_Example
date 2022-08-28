@@ -3,10 +3,12 @@ function AddPayment(price, descriprion){
     var storage = localStorage.getItem('payments');
     var array = storage==null ? [] : JSON.parse(storage);
 
+    var saal = tarikh.toLocale("en").format("YYYY")	//example => 1400
+
     var month = tarikh.toLocale("en").format("MM")	//example => 04
     var day = tarikh.toLocale("en").format("DD")	//example => 08
 
-    var datesh = day + "/" + month;
+    var datesh = saal + "/" + month + "/" + day;
 
     array.unshift([price,descriprion,datesh]);
     localStorage.removeItem('payments');
@@ -17,17 +19,32 @@ function ShowList(){
     var list = JSON.parse(localStorage.getItem("payments"));
     var total = 0;
 
-    list.forEach(element=>{
-        //>> show list
+    var div = document.getElementById('payments-wrap');
 
+    list.forEach(element=>{
+        var amount = element[0];
+        var chera = element[1];
+        var key = element[2];
+
+        //>> show list
+        var divpay = document.createElement("div");
+        divpay.classList.add("payment-row");
+        divpay.classList.add("row");
+            if(amount>0){
+                divpay.innerHTML = '<div class="amount col-9" ><h5><i class="bi bi-arrow-up"></i> &nbsp&nbsp' + separate(amount) + ' <span>تومان</span></h5></div><div class="date col-3" ><h6>' + key + '</h6></div>';
+            }else{
+                divpay.innerHTML = '<div class="amount col-9" ><h5><i class="bi bi-arrow-down"></i> &nbsp&nbsp' + separate(amount) + ' <span>تومان</span></h5></div><div class="date col-3" ><h6>' + key + '</h6></div>';
+            }
+        div.appendChild(divpay);
 
         //>> Total Calculate
         total = total + element[0];
     });
 
-    console.log(total);
+    document.getElementById("total").innerHTML = separate(total);
 
 }
+
 
 function ShowMain(){
     var lists = GetMainList();
