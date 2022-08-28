@@ -2,20 +2,21 @@ body, html {
     height:100%;
     background: linear-gradient(to bottom, #41295a, #2f0743);
     overflow-x: hidden;
-      font-family: 'Dosis', sans-serif;
+      font-family: 'pinar', sans-serif;
   }
   .first{
     color: #FFF;
-    padding: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10%;
+    text-align: center;
     
 
   }
 
   .title{
     
+  }
+  .userform{
+    border-radius: 20px;
   }
   
   btn {
@@ -25,7 +26,7 @@ body, html {
   }
   .btn:focus, .btn:active, .btn.active, .btn:active:focus {
       outline: 0;
-    border-radius: 0
+    border-radius: 20px;
   }
   
   .all{
@@ -52,7 +53,7 @@ body, html {
       border-color: #38294ea8;
       color: #fff;
       background-color: #38294ea8;
-    border-radius: 0
+    border-radius: 20px;
   }
   .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
       background-image: none;
@@ -96,7 +97,8 @@ body, html {
    @media (min-width: 768px) {
   #userform {
       background: rgba(0,0,0,0.8);
-      margin: 50px 0 20px 0
+      margin: 50px 0 20px 0;
+      border-radius: 20px;
   }
   }
   #userform .nav-tabs.nav-justified > li > a {
@@ -109,7 +111,7 @@ body, html {
       border: 0;
       background: #38294ea8;
       color: white;
-      border-radius: 0;
+      border-radius: 20px;
   }
   #userform .nav-justified > li > a {
       margin-bottom: 0;
@@ -176,11 +178,13 @@ body, html {
       margin-top: 20px;
   }
   #userform .tab-content {
-      padding: 20px
+      padding: 20px;
+      border-radius: 20px;
   }
   #userform .form-group {
       margin-bottom: 0px;
       color: #FFF;
+      border-radius: 20px;
   }
   #userform .form-group input, #userform .form-group textarea {
       padding: 10px;
@@ -189,10 +193,11 @@ body, html {
       height: auto;
       background-color: rgba(237, 235, 250, 0.1);
       color: #FFF;
+      border-radius: 20px;
 
   }
   #userform .form-control {
-      border-radius: 0;
+      border-radius: 20px;
       border: 1px solid #fff;
   }
   #userform .form-control:focus {
