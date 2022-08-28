@@ -33,7 +33,7 @@ function ShowList(){
             if(amount>0){
                 divpay.innerHTML = '<div class="amount col-9" ><h5><i class="bi bi-arrow-up"></i> &nbsp&nbsp' + separate(amount) + ' <span>تومان</span></h5></div><div class="date col-3" ><h6>' + key + '</h6></div>';
             }else{
-                divpay.innerHTML = '<div class="amount col-9" ><h5><i class="bi bi-arrow-down"></i> &nbsp&nbsp' + separate(amount) + ' <span>تومان</span></h5></div><div class="date col-3" ><h6>' + key + '</h6></div>';
+                divpay.innerHTML = '<div class="amount col-9" ><h5><i class="bi bi-arrow-down"></i> &nbsp&nbsp' + separate(amount*-1) + ' <span>تومان</span></h5></div><div class="date col-3" ><h6>' + key + '</h6></div>';
             }
         div.appendChild(divpay);
 
