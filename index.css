@@ -118,3 +118,10 @@ font-family: "pinar-med";
     color: rgb(255, 94, 94);
     font-size: 24px;
 }
+
+.detail{
+    color: rgb(182, 182, 182) !important;
+    font-size: 12px !important;
+    margin-right: 30px;
+    margin-top: 10px;
+}
