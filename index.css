@@ -1,11 +1,14 @@
 body{
     background: linear-gradient(to bottom, #41295a, #2f0743);
+padding: 0;
+
 }
 .container{
-    padding: 5%;
+
+padding: 0;
 }
 .heading-wrap{
-
+padding: 2%;
 }
 .heading-wrap h5{
     font-family: "pinar-bold";
@@ -37,7 +40,7 @@ border-radius: 50px;
 display: flex;
 align-items: center;
 position: absolute;
-left: 0;
+left: 5px;
 top: 8px;
 }
 .heading-wrap .col-6 a i{
@@ -71,15 +74,28 @@ top: 8px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     margin-top: 100px;
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+    height: 100vh;
+
 }
 .payments-wrap hr{
     opacity: 1;
-    height: 3px;
+    height: 5px; 
+    background-color: white;
+    top: 5px;
+        position: absolute;
+    left: calc(50% - 10%);
+    width: 20%;
+    border-radius: 10px;
+    box-shadow:  7px 7px 11px #b039dd,
+    -7px -7px 11px #d745ff;
 }
 .payments-wrap .payment-row{
-    margin-top: 20px;
+    margin-top: 5px;
 padding: 10px;
-margin-top: 20px;
+
 }
 .payments-wrap .payment-row .col-9,.payments-wrap .payment-row .col-3{
     display: flex;
