@@ -38,7 +38,7 @@ function ShowList(){
         div.appendChild(divpay);
 
         //>> Total Calculate
-        total = total + element[0];
+        total = total + Number(element[0]);
     });
 
     document.getElementById("total").innerHTML = separate(total);

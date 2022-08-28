@@ -12,7 +12,7 @@
   <!--bootstrap popper js-->
           <!--bootstrap icon-->
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
+          <script src="./functions.js"></script>
     <title>Document</title>
 </head>
 
@@ -34,19 +34,19 @@
         </div>
     </div>
         <div class="first row">
-            <h3 class="title"> پرداختی های خود را وارد کنید</h3>
+            <h3 class="title"> پرداختی / دریافتی</h3>
         </div>
-        <form action="">
+        <form id="myform" action="./index.html">
           <div class="check-form-wrap row">  
             <div class="col-6">
               <div class="form-check " >
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cash" value="option1">
                 <label class="form-check-label" for="inlineRadio1"><h5>دریافت</h5></label>
               </div>
             </div>  
             <div class="col-6">
               <div class="form-check ">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="pay" value="option2">
                 <label class="form-check-label" for="inlineRadio2"><h5>پرداخت</h5></label>
               </div>
             </div>           
@@ -58,15 +58,15 @@
     
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><h4>مبلغ</h4></label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="لطفا مبلغ مورد نظر را وارد کنید!">
+            <input type="text" class="form-control" id="amount" placeholder="لطفا مبلغ مورد نظر را وارد کنید!">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label" ><h4>توضیحات</h4> </label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
             <div>
-              <button type="submit"class="btn btn-primary btn-lg " >ثبت هزینه</button>
-              <a href="#" class="btn btn-primary btn-lg " role="button">بازگشت </a>
+              <button onclick="SaveData()" type="button"class="btn btn-primary btn-lg " >ثبت هزینه</button>
+              <a href="./index.html" class="btn btn-primary btn-lg " role="button">بازگشت </a>
             </div>
         </form>
      
@@ -76,6 +76,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script>
+      function SaveData(){
+          var amount = document.getElementById("amount").value;
+          var des = document.getElementById("exampleFormControlTextarea1").value;
+
+          if(document.getElementById("pay").checked == true){
+              amount = amount*-1;
+          }
+
+          AddPayment(amount,des);
+
+          document.getElementById("myform").submit();
+      }
+      
+    </script>
 
 </body>
 
