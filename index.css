@@ -72,9 +72,14 @@ top: 8px;
     border-top-right-radius: 30px;
     margin-top: 100px;
 }
+.payments-wrap hr{
+    opacity: 1;
+    height: 3px;
+}
 .payments-wrap .payment-row{
     margin-top: 20px;
 padding: 10px;
+margin-top: 20px;
 }
 .payments-wrap .payment-row .col-9,.payments-wrap .payment-row .col-3{
     display: flex;
