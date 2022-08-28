@@ -60,9 +60,7 @@ text-align: center;
         margin: 0 auto;
         color:#c33ff6 ;
     }
-  .check-form-wrap .form-check{
- width: 50% !important;
-  }
+
   form {
     margin-top: 20px;
   }
@@ -80,4 +78,7 @@ font-family: "pinar-med";
   }
   form .form-check{
     width: 100% !important;
+  }
+  form .inputs-wrap{
+    margin-top: 20px;
   }
