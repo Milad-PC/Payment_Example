@@ -5,11 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pay.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="first row">
+            <h1 class="title"> پرداختی های خود را وارد کنید</h1>
+        </div>
+        <div class="all">
+            <div id="userform">
+              <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="active"><a href="#signup"  role="tab" data-toggle="tab">پرداخت</a></li>
+                <li><a href="#login"  role="tab" data-toggle="tab">دریافت</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active in" id="signup">
+                  <form id="signup">
+                    
+                    <div class="form-group">
+                      <label> مبلغ<span class="req">*</span> </label>
+                      <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>توضیحات<span class="req">*</span> </label>
+                        <input type="text" class="form-control" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    <div class="mrgn-30-top">
+                      <button type="submit" class="btn btn-larger btn-block">
+                      ثبت
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade in" id="login">
+                  <h2 class="text-uppercase text-center"> Log in</h2>
+                  <form id="login">
+                    <div class="form-group">
+                      <label> Your Email<span class="req">*</span> </label>
+                      <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." autocomplete="off">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                      <label> Password<span class="req">*</span> </label>
+                      <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="mrgn-30-top">
+                      <button type="submit" class="btn btn-larger btn-block"/>
+                      دریافت
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="#" class="btn btn-primary btn-lg disabled" role="button">بازگشت</a>
+          </div>
+        </div>
+        
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script  src="./pay.js"></script>
 </body>
+
 
 </html>
